@@ -13,7 +13,7 @@
 ## 2. 执行 Vue 官方的项目脚手架工具
 
 ```sh
-npm init vue@latest
+> npm init vue@latest
 
 Need to install the following packages:
   create-vue@latest
@@ -43,13 +43,14 @@ Done. Now run:
 ## 3. 安装依赖
 
 ```sh
-npm install
+> npm install
 ```
 
 ## 4. 编译和热重载（用于开发）
 
 ```sh
-npm run dev
+> npm run dev
+
 VITE v4.2.1  ready in 362 ms
 
   ➜  Local:   http://127.0.0.1:5173/
@@ -60,7 +61,7 @@ VITE v4.2.1  ready in 362 ms
 ## 5. 编译和压缩（用于生产）
 
 ```sh
-npm run build
+> npm run build
 
 vite v4.2.1 building for production...
 ✓ 23 modules transformed.
