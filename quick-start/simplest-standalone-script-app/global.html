@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue 独立脚本应用（全局构建版）</title>
+
+    <!-- 借助 script 标签直接通过 CDN 来引入全局构建版本的 Vue -->
+    <!-- 该版本的所有顶层 API 都以属性的形式暴露在了全局的 Vue 对象上 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <!-- 挂载点 -->
+    <div id="app"></div>
+
+    <script>
+      // 解构全局变量 Vue 中的 API
+      const { createApp } = Vue;
+
+      // 创建应用并挂载在 DOM 上
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue (global) !',
+          };
+        },
+        template: `
+            <div>{{ message }}</div>
+            <div><input type="text" v-model="message" /></div>
+          `,
+      }).mount('#app');
+    </script>
+  </body>
+</html>

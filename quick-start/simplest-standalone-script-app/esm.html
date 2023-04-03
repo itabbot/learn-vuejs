@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue 独立脚本应用（ES 模块构建版）</title>
+  </head>
+  <body>
+    <!-- 挂载点 -->
+    <div id="app"></div>
+
+    <!-- 使用 type="module" -->
+    <script type="module">
+      // 通过 CDN 导入 ES 模块构建版本的 Vue
+      import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+
+      // 创建应用并挂载在 DOM 上
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue (esm) !',
+          };
+        },
+        template: `
+            <div>{{ message }}</div>
+            <div><input type="text" v-model="message" /></div>
+          `,
+      }).mount('#app');
+    </script>
+  </body>
+</html>
